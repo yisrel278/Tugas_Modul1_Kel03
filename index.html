@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><title>Tugas Modul 1 Kelompok 3 PRPLBK</title></head>
+<body>
+ <form name="calculator">
+   <h3>Masukkan dua angka!</h3>
+    <td>Angka 1 : </td><td><input type="number" name="angka1"></td><br><br>
+    <td>Angka 2 : </td><td><input type="number" name="angka2"></td><br><br>
+    <td>Hasil : </td><td><input type="number" name="hasil"></td>
+    <br><br>
+    <td colspan="3" align="center">
+     <input class="tombol" type="button" onclick="tambah()" value="  +  ">
+     <input class="tombol" type="button" onclick="kurang()" value="  -  ">
+    </td>
+ </form>
+</body>
+</html>
+<script type="text/javascript">
+const tambah=()=>{
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1+angka2;
+ document.calculator.hasil.value=hasil;
+ (hasil%2==0)?console.log("Angka genap"):console.log("Angka ganjil");
+}
+const kurang=()=>{
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1-angka2;
+ document.calculator.hasil.value=hasil;
+ (hasil%2==0)?console.log("Angka genap"):console.log("Angka ganjil");
+}
+</script>
